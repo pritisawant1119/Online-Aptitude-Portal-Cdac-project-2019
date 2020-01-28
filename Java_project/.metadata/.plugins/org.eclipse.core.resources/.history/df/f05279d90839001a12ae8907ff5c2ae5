@@ -1,0 +1,43 @@
+package com.app.dao;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.app.pojos.Subject;
+
+public class SubjectDaoImpl implements ISubject 
+{
+  @Autowired
+  private SessionFactory sf;
+
+@Override
+public Subject addSubject(Subject subject) 
+{
+	sf.getCurrentSession().save(subject);
+    return subject;
+}
+
+@Override
+public String deleteSubject(Subject subject) 
+{
+	sf.getCurrentSession().delete(subject);
+	return null;
+}
+
+@Override
+public Subject updateSubject(Subject subject) 
+{
+	sf.getCurrentSession().update(subject);
+	return subject;
+}
+
+@Override
+public List<Subject> listSubject() {
+	String jpql ="select s from subject s";
+	return sf.getCurrentSession().createQuery(jpql,Subject.class).getResultList();
+}
+  
+  
+}

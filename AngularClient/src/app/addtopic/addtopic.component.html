@@ -1,0 +1,23 @@
+<br>
+
+<div style="width:70%;margin-left: 20%;margin-right: 20%;">
+  <h1 style="color: azure;margin-left: 40%;margin-right: 40%;">Topic</h1><br>
+  <div style="background-color: black;opacity:0.7;margin-left: 20%;margin-right: 20%;">
+<form #myForm=ngForm (ngSubmit)="addTopic(myForm)" method="POST" class="form-inline" role="form" style="width:50%">
+
+  <div class="form-group" style="color: azure;">
+    <label>Topic Name</label><br>
+    <input  type="text" ngModel class="form-control" name="tname" placeholder="Enter topic Name" style="width:500px">
+  </div>
+  <br>
+<br>
+  <div class="form-group" style="color: azure;">
+    <label>Description</label><br>
+   <p> <textarea id="des" name="description" ngModel class="form-control" placeholder="Description" style="height:170px;width:500px;"></textarea></p>
+  </div>
+  <br>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>

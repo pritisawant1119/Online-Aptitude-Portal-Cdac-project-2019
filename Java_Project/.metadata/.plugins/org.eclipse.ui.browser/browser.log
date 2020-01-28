@@ -1,0 +1,16 @@
+
+Jan 27, 2020 16:26:57.88 NEW SESSION
+Jan 27, 2020 16:26:57.88 [8251:8251:0127/162657.879109:ERROR:sandbox_linux.cc(372)] InitializeSandbox() called with multiple threads in process gpu-process.
+Jan 27, 2020 16:27:13.22 [8191:8236:0127/162713.222892:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -130
+Jan 27, 2020 16:27:34.32 [8191:8236:0127/162734.320835:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -130
+Jan 27, 2020 16:28:34.26 [8191:8236:0127/162834.265092:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -130
+Jan 27, 2020 16:30:05.41 [8191:8236:0127/163005.416330:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -130
+Jan 27, 2020 16:33:58.23 [8191:8236:0127/163358.237083:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -130
+Jan 27, 2020 16:41:53.49 [8191:8236:0127/164153.491204:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -130
+Jan 27, 2020 16:41:57.90 [8191:8191:0127/164157.799354:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+Jan 27, 2020 16:42:18.54 [8191:8191:0127/164218.542890:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+Jan 27, 2020 16:43:15.94 [8191:8191:0127/164315.945543:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+Jan 27, 2020 16:44:49.25 [8191:8191:0127/164449.252260:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+Jan 27, 2020 16:48:32.54 [8191:8191:0127/164832.541814:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.
+Jan 27, 2020 16:51:53.49 [8191:8236:0127/165153.492764:ERROR:connection_factory_impl.cc(418)] Failed to connect to MCS endpoint with error -130
+Jan 27, 2020 16:54:28.63 [8191:8191:0127/165428.630258:ERROR:gcm_channel_status_request.cc(145)] GCM channel request failed.

@@ -1,0 +1,16 @@
+<br>
+<h1 style="color: azure;margin-left: 40%;margin-right: 40%;">Subjects</h1><br>
+<div style="width:70%;margin-left: 20%;margin-right: 20%;">
+  <div style="background-color: black;opacity:0.7;margin-left: 20%;margin-right: 20%;">
+<form #myForm=ngForm (ngSubmit)="addSubject(myForm)" method="POST" class="form-inline" role="form" style="width:50%">
+
+  <div class="form-group" style="color:azure;">
+    Subject Name
+    <br>
+    <input  type="text" ngModel class="form-control" name="subject" placeholder="Enter Subject Name"><br><br>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-warning">Submit</button>
+</form>
+</div>
+</div>

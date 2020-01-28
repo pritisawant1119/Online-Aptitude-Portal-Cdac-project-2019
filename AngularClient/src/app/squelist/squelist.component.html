@@ -1,0 +1,33 @@
+<button type="button" (click)="back()" class="btn btn-default"style="margin-left:10%;">Back</button>
+<h1 style="color: azure;margin-left: 20%;margin-right: 20%;">Questions</h1>
+<div class="container" >
+   <form > <!-- #ngForm="MyForm" NgSubmit="submitAnswer(MyForm.value)" -->
+  <ul class="list-group">
+    <!-- <input type="button" ><a class='btn btn-info glyphicon glyphicon-edit' (click)="subject()">Back</a> -->
+    <br>
+    <li *ngFor="let question of questions; let i = index " class="list-group-item">{{i+1}}. {{question.question}}
+      <div  class="radio">
+        <label><input type="radio" value="1" ngModel name="option1" (click)="setAnswer1(question)" >{{question.option1}}</label>
+      </div>
+      <div  class="radio">
+        <label><input type="radio" value="2" ngModel name="option2" (click)="setAnswer2(question)" >{{question.option2}}</label>
+      </div>
+      <div  class="radio">
+        <label><input type="radio" value="3" ngModel name="option3" (click)="setAnswer3(question)">{{question.option3}}</label>
+      </div>
+      <div  class="radio">
+        <label><input type="radio" value="4" ngModel name="option4" (click)="setAnswer4(question)" >{{question.option4}}</label>
+      </div>
+      
+    <div *ngIf="status">
+        <h1>After Submit ans div</h1>
+    </div>
+    </li>
+  </ul>
+  
+</form>
+  <!-- <div>
+    <label for="email" style="color:azure;">Your Score Is: {{marks}}</label>
+  </div> -->
+
+</div>

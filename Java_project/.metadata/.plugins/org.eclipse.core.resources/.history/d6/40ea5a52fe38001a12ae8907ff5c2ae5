@@ -1,0 +1,44 @@
+package com.app.pojos;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+
+@Entity
+public class Topic
+{
+   private Integer topicId;
+   private String tname;
+   
+   public Topic() {
+   System.out.println("Inside Topic Constructor");
+}
+
+public Topic(String tname) {
+	super();
+	this.tname = tname;
+}
+
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+public Integer getTopicId() {
+	return topicId;
+}
+
+public void setTopicId(Integer topicId) {
+	this.topicId = topicId;
+}
+
+public String getTname() {
+	return tname;
+}
+
+public void setTname(String tname) {
+	this.tname = tname;
+}
+   
+   
+}

@@ -1,0 +1,46 @@
+<button type="button" (click)="back()" class="btn btn-default"style="margin-left:10%;">Back</button>
+<h1 style="color: azure;margin-left: 20%;margin-right: 20%;">Questions</h1><br>
+<div style="width:110%;">
+  <div style="background-color: black;opacity:0.7;margin-left: 20%;margin-right: 20%;">
+<div class="table-responsive">
+  <table class="table ">
+    <thead style="color: azure;">
+      <tr>
+        <!-- <th>Id</th> -->
+        <th>Questions</th>
+        <th>Option 1</th>
+        <th>Option 2</th>
+        <th>Option 3</th>
+        <th>Option 4</th>
+        <th>Answer Key</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let question of questions" style="color: azure;">
+      <tr>
+        <!-- <td>{{question.id}}</td> -->
+        <td>{{question.question}}</td>
+        <td>{{question.option1}}</td>
+        <td>{{question.option2}}</td>
+        <td>{{question.option3}}</td>
+        <td>{{question.option4}}</td>
+        <td>{{question.answerkey}}</td>
+        <td>
+          
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-edit" routerLink="/updateQuestion/{{question.id}}"></span>Update</button></td>
+        
+        </tr>
+          <br>
+          <br>
+          <br>          
+    </tbody>
+    <td>
+          
+      <button type="button" (click)="addQuestion()" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span>Add Question</button></td>
+    
+  
+    </table>
+  
+</div>
+</div>
+</div>
+<!-- <input type="button" class="text-center" style="margin-left: 20%;margin-right: 20%;"><a class='btn btn-info btn-xs' (click)="subject()"><span class="glyphicon glyphicon-edit"></span>Back</a>  -->

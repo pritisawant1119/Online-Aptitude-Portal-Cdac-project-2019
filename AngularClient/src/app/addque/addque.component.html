@@ -1,0 +1,37 @@
+<div style="width:70%;margin-left: 20%;margin-right: 20%;">
+  <h1 style="color: azure;margin-left: 40%;margin-right: 40%;">Question</h1><br>
+  <div style="background-color: black;opacity:0.7;margin-left: 20%;margin-right: 20%;">
+<form #myForm=ngForm (ngSubmit)="addQuestion(myForm)" method="POST" class="form-inline" role="form" style="width:50%">
+
+  <div class="form-group" style="color: azure;">
+    <label>Question</label><br>
+    <textarea id="que" name="question" ngModel class="form-control" placeholder="Enter Question" style="height:110px;width:500px;"></textarea>
+  </div>
+  
+  <div class="form-group" style="color: azure;">
+    <label>Option 1</label><br>
+    <input  type="text" ngModel class="form-control" name="option1" placeholder="Enter option1" style="width:500px;">
+  </div>
+
+  <div class="form-group" style="color: azure;">
+    <label>Option 2</label><br>
+    <input  type="text" ngModel class="form-control" name="option2" placeholder="Enter option2" style="width:500px;">
+  </div>
+
+  <div class="form-group" style="color: azure;">
+    <label>Option 3</label><br>
+    <input  type="text" ngModel class="form-control" name="option3" placeholder="Enter option3" style="width:500px;">
+  </div>
+
+  <div class="form-group" style="color: azure;">
+    <label>Option 4</label><br>
+    <input  type="text" ngModel class="form-control" name="option4" placeholder="Enter option4" style="width:500px;">
+  </div>
+
+  <div class="form-group" style="color: azure;">
+    <label>Answerkey</label><br>
+    <input  type="text" ngModel class="form-control" name="answerkey" placeholder="Enter Answerkey" style="width:500px;">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

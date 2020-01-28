@@ -1,0 +1,57 @@
+package com.app.pojos;
+
+import javax.persistence.*;
+
+@Entity
+
+public class Topic {
+	private Integer topicId;
+	private String tname;
+	private String description;
+	public Topic() {
+		
+	}
+
+	
+	public Topic(String tname, String description) {
+		super();
+		this.tname = tname;
+		this.description = description;
+	}
+
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Integer getTopicId() {
+		return topicId;
+	}
+
+	public void setTopicId(Integer topicId) {
+		this.topicId = topicId;
+	}
+	
+	@Column(nullable=false)
+	public String getTname() {
+		return tname;
+	}
+
+	public void setTname(String tname) {
+		this.tname = tname;
+	}
+	@Column(length=100)
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Topic [topicId=" + topicId + ", tname=" + tname + ", description=" + description + "]";
+	}
+
+}

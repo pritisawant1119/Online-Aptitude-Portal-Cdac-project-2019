@@ -1,0 +1,21 @@
+package com.app.dao;
+
+import java.util.List;
+
+import com.app.pojos.User;
+
+public interface IUserDao 
+{
+    List<User> getAllUsers();
+	
+	void addUser(User u);
+	
+	void updateUser(User u);
+	
+	void deleteUser(Integer id);
+	
+	User getUserByEmailAndPassword(String email,String password);
+	
+	User getUser(Integer id);
+	
+}

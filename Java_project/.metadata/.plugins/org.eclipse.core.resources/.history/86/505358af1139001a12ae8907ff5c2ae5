@@ -1,0 +1,47 @@
+package com.app.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.app.dao.ISubject;
+import com.app.pojos.Subject;
+
+
+@RestController
+@RequestMapping("/subject")
+public class SubjectController 
+{
+  @Autowired
+  ISubject subDao;
+  
+  @GetMapping("/list")
+  public List<Subject> listSubject()
+  {
+	  return subDao.listSubject();
+  }
+  
+  @PostMapping("/insert")
+  public Subject insert(@RequestBody Subject sub)
+  {
+	  subDao.addSubject(sub);
+	  return sub;
+  }
+  
+  @PutMapping("/update")
+  public Subject update(@RequestParam String sname)
+  {
+	  Subject sub = new Subject();
+	  sub.setSname(sname);
+	  subDao.updateSubject(sub);
+	  return sub;
+  }
+}

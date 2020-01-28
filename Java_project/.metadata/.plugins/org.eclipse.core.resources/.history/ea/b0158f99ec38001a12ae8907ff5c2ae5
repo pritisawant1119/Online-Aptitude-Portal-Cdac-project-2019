@@ -1,0 +1,90 @@
+package com.app.pojos;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name = "course")
+public class Course 
+{
+   private Integer courseId;
+   private String cname;
+   private Date createdOn,modifiedOn;
+   private String description;
+   
+   public Course() 
+   {
+	 System.out.println("Inside Course Constructor");
+   }
+
+public Course(String cname, Date createdOn, Date modifiedOn, String description) {
+	super();
+	this.cname = cname;
+	this.createdOn = createdOn;
+	this.modifiedOn = modifiedOn;
+	this.description = description;
+}
+
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+public Integer getCourseId() {
+	return courseId;
+}
+
+public void setCourseId(Integer courseId) {
+	this.courseId = courseId;
+}
+
+@Column(length = 50)
+public String getCname() {
+	return cname;
+}
+
+public void setCname(String cname) {
+	this.cname = cname;
+}
+
+@Temporal(TemporalType.DATE)
+public Date getCreatedOn() {
+	return createdOn;
+}
+
+public void setCreatedOn(Date createdOn) {
+	this.createdOn = createdOn;
+}
+
+@Temporal(TemporalType.DATE)
+public Date getModifiedOn() {
+	return modifiedOn;
+}
+
+public void setModifiedOn(Date modifiedOn) {
+	this.modifiedOn = modifiedOn;
+}
+
+1cd
+
+public String getDescription() {
+	return description;
+}
+
+public void setDescription(String description) {
+	this.description = description;
+}
+
+@Override
+public String toString() {
+	return "Course [courseId=" + courseId + ", cname=" + cname + ", createdOn=" + createdOn + ", modifiedOn="
+			+ modifiedOn + ", description=" + description + "]";
+}
+   
+   
+}

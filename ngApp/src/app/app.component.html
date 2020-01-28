@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+ 
+  <ul class="nav navbar-nav">
+   
+    <li class="active">
+      <a routerLink="">Home</a>
+    </li>
+
+
+    <li>
+      <a routerLink="/about">About Us</a>
+    </li>
+
+
+    <li>
+      <a routerLink="/course">Subject</a>
+    </li>
+
+    <li>
+      <a routerLink="/register">Register</a>
+    </li>
+
+
+   
+   
+    <li *ngIf="!isLogin">
+      <a routerLink="/login">Login</a>
+    </li>
+    <li *ngIf="isLogin">
+      <a (click)="logout()">LogOut</a>
+    </li>
+  </ul>
+</nav>
+<!-- <img src="/src/assets/img/gym3.jpeg" alt="bg-img"> -->
+
+
+
+<router-outlet></router-outlet>

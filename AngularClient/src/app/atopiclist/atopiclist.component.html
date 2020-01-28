@@ -1,0 +1,40 @@
+
+<button type="button" (click)="subject()" class="btn btn-default"style="margin-left:10%;">Back</button>
+<h1 style="color: azure;margin-left: 20%;margin-right: 20%;">Topics</h1><br>
+<div style="width:110%">
+  <div style="background-color: black;opacity:0.7;margin-left: 20%;margin-right: 20%;">
+<div class="table-responsive">
+  <table class="table ">
+    <thead style="color: azure;">
+      <tr>
+        <!-- <th>Id</th> -->
+        <th>Topics</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let topic of topics" style="color: azure;">
+      <tr>
+        <!-- <td>{{topic.id}}</td> -->
+        <td>{{topic.tname}}</td>
+        <td>{{topic.description}}</td>
+        <td>
+          
+          <button type="button" (click)="question(topic.id)" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span>Show Questions</button></td>
+          <td>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-edit" routerLink="/updateTopic/{{topic.id}}"></span>Update</button></td>
+        </tr>
+          <br>
+          <br>
+          <br>          
+    </tbody>
+    <td>
+          
+      <button type="button" (click)="addTopic()" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span>Add topic</button></td>
+  </table>
+  
+</div>
+</div>
+</div>
+<!-- <input type="button" class="text-center" (click)="subject()"><span class="glyphicon glyphicon-warning"></span> -->
+
+

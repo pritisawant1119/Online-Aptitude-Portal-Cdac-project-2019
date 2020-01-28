@@ -1,0 +1,67 @@
+package com.app.pojos;
+
+import java.util.Arrays;
+
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+
+public class Subject 
+{
+  private Integer sId;
+  private String sname;
+  @JsonIgnore
+  private byte[] picture;
+  
+  public Subject() {
+	System.out.println("Inside Subject Constructor");
+}
+
+  
+public Subject(String sname, byte[] picture) {
+	super();
+	this.sname = sname;
+	this.picture = picture;
+}
+
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+public Integer getsId() {
+	return sId;
+}
+
+
+public void setsId(Integer sId) {
+	this.sId = sId;
+}
+
+@Column(nullable=false)
+public String getSname() {
+	return sname;
+}
+
+
+public void setSname(String sname) {
+	this.sname = sname;
+}
+
+@Lob
+public byte[] getPicture() {
+	return picture;
+}
+
+
+public void setPicture(byte[] picture) {
+	this.picture = picture;
+}
+
+
+@Override
+public String toString() {
+	return "Subject [sId=" + sId + ", sname=" + sname + ", picture=" + Arrays.toString(picture) + "]";
+}
+  
+  
+}

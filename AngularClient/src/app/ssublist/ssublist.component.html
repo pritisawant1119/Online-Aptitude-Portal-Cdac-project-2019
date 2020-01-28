@@ -1,0 +1,27 @@
+
+<div>
+    <h1 style="color: azure;margin-left: 20%;margin-right: 20%;">Subjects</h1><br>
+<div style="background-color: black;opacity:0.7;margin-left: 20%;margin-right: 20%;">
+    
+<div class="table-responsive">
+  <table class="table ">
+    <thead>
+      <tr style="color:azure">
+        <th>Id</th>
+        <th>Subject</th>
+      </tr>
+    </thead>
+    <tbody style="color: azure;">
+      <tr *ngFor="let subject of subjects">
+         <td>{{subject.id}}</td>
+        <td>{{subject.subject}}</td> 
+        <td>
+          
+          <button type="button" (click)="toplist(subject.id)" value="{{subject.subject}}" class="btn btn-success">Show Topics</button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

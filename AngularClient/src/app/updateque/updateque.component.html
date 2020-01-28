@@ -1,0 +1,45 @@
+<div class=" text-center">
+  <h2 style="color: aliceblue;">Update Question</h2>
+</div>
+<br>
+<br>
+<div class="update" style="background-color: black; margin-left: 30% ;margin-right: 30%; opacity: 0.7; ">
+  <div class="col-md4" >
+        
+<form  style="max-width:500px;margin:auto;">
+<div class="form-group" style="color:azure;">
+    ID
+    <input type="number" name="id" [(ngModel)]="questions.id" class="form-control" id="id1" placeholder="id" readonly>
+  </div>
+  <div class="form-group" style="color:azure;">
+    <h5 style="color: aliceblue;">Question</h5>
+    <input type="text" name="question" [(ngModel)]="questions.question" class="form-control" id="id2" placeholder="Enter question">
+  </div>
+  <div class="form-group" style="color:azure;">
+    <h5 style="color: aliceblue;">Option 1</h5>
+    <input type="text" name="option1" [(ngModel)]="questions.option1" class="form-control" id="id3" placeholder="Option1" >
+  </div>
+  <div class="form-group" style="color:azure;">
+  <h5 style="color: aliceblue;">  Option 2</h5>
+    <input type="text" name="option2" [(ngModel)]="questions.option2" class="form-control" id="id4" placeholder="Option2">
+  </div>
+  <div class="form-group" style="color:azure;">
+    <h5 style="color: aliceblue;">Option 3</h5>
+    <input type="text" name="option3" [(ngModel)]="questions.option3" class="form-control" id="id5" placeholder="Option3">
+  </div>
+<div class="form-group">
+<h5 style="color: aliceblue;">Option 4</h5>
+<input type="text" name="option4" [(ngModel)]="questions.option4" class="form-control" id="id6" placeholder="Option4">
+</div>
+<div class="form-group">
+ <h5 style="color: aliceblue;"> AnswerKey</h5>
+  <!-- <input type="text" name="description" [(ngModel)]="topics.description" class="form-control" id="" placeholder="description"> -->
+  <input type="text" name="answerkey" [(ngModel)]="questions.answerkey" class="form-control" id="" placeholder="Answerkey">
+  </div>
+<button type="button" (click)="update()"  class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+<br>
+<br>
+<br>

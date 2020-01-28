@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>FeedBack</h2>
+    <h5>Any Quaries Send Us</h5>
+    <p style="font-style:oblique; color:black; ">"Your attitude, not your aptitude, will determine your altitude."</p>
+
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="/assets/img/edu6.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form  #Feedbackform="ngForm" (ngSubmit)="addFeedback(Feedbackform)" role="form">
+        <!-- <label for="uid">User Id</label>
+        <input type="text"  name="uid" value="user.id" ngModel class="form-control" placeholder="Your User Id.."> -->
+        <label for="rating">Ratings</label>
+        <input type="text" ngModel class="form-control" name="rating" placeholder="Your Rating..">
+       
+        <label for="suggestion">Suggestion</label>
+        <textarea id="suggestion" name="suggestion" ngModel class="form-control" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

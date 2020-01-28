@@ -1,0 +1,94 @@
+package com.app.pojos;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+@Entity
+@Table(name = "topic")
+public class Topic {
+	private Integer tId;
+	private String topicName;
+	private String description;
+	@JsonBackReference
+	private Subject subject;
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date modifiedOn;
+
+	public Topic() {
+		System.out.println("Inside Topic Constructor");
+	}
+
+	public Topic(String topicName, String description, Subject subject, Date modifiedOn) {
+		super();
+		this.topicName = topicName;
+		this.description = description;
+		this.subject = subject;
+		this.modifiedOn = modifiedOn;
+	}
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Integer gettId() {
+		return tId;
+	}
+
+	public void settId(Integer tId) {
+		this.tId = tId;
+	}
+
+	public String getTopicName() {
+		return topicName;
+	}
+
+	public void setTopicName(String topicName) {
+		this.topicName = topicName;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "s_id")
+	public Subject getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
+	@Temporal(TemporalType.DATE)
+	public Date getModifiedOn() {
+		return modifiedOn;
+	}
+
+	public void setModifiedOn(Date modifiedOn) {
+		this.modifiedOn = modifiedOn;
+	}
+
+	@Override
+	public String toString() {
+		return "Topic [tId=" + tId + ", topicName=" + topicName + ", description=" + description + "]";
+	}
+
+}

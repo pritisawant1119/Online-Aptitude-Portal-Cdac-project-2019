@@ -1,0 +1,38 @@
+<div class="container">
+  <form #myForm="ngForm" (ngSubmit)="register(myForm)" role="form" style="width: 50%;">
+    <legend>Registration Form</legend>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" ngModel class="form-control" id="" name="name" placeholder="Enter name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input ngModel type="text" ngModel class="form-control" id="" name="email" placeholder="Enter Email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input ngModel type="password" ngModel class="form-control" id="" name="password" placeholder="Enter password">
+    </div>
+
+    <div class="form-group">
+      <label for="mobile">Mobile No:</label>
+      <input type="text" ngModel class="form-control" id="" name="mobile" placeholder="Enter Mobile">
+    </div>
+
+   
+
+    <label for="role">Role</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <select>
+      <option value="0" ngModel class="form-control">ADMIN</option>
+      <option value="1" ngModel class="form-control">STUDENT</option>
+      
+    </select>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-success">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  </form>
+</div>

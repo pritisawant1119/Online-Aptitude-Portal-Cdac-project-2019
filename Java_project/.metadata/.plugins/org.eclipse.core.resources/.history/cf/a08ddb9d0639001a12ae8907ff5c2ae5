@@ -1,0 +1,10 @@
+package com.app.dao;
+
+import com.app.pojos.Subject;
+
+public interface ISubject
+{
+    Subject addSubject(Subject subject);
+    String deleteSubject(Subject subject);
+    Subject updateSubject(Subject subject);
+}

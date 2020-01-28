@@ -1,0 +1,16 @@
+package com.app.dao;
+
+import java.util.List;
+
+import com.app.pojos.Topic;
+
+
+
+public interface ITopic 
+{
+	Topic addTopic(Topic topic);
+	List<Topic> listTopic();
+    String deleteTopic(Topic topic);
+    String updateTopic(Topic topic);
+    
+}

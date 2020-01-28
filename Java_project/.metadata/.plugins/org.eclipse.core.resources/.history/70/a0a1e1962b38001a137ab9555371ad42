@@ -1,0 +1,13 @@
+package com.app.dao;
+
+import com.app.pojos.User;
+
+public class UserDaoImpl implements IUser {
+
+	@Override
+	public Integer registerUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

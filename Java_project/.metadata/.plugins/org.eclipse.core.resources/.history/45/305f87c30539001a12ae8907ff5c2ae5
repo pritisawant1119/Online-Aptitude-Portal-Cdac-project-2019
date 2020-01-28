@@ -1,0 +1,28 @@
+package com.app.dao;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.app.pojos.Subject;
+
+public class SubjectDaoImpl implements ISubject 
+{
+  @Autowired
+  private SessionFactory sf;
+
+@Override
+public Subject addSubject(Subject subject) 
+{
+	sf.getCurrentSession().save(subject);
+    return subject;
+}
+
+@Override
+public String deleteSubject(Subject subject) 
+{
+	sf.getCurrentSession().delete(subject);
+	return null;
+}
+  
+  
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/home/sunbeam/Desktop/DacProject/Java_Project/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2348836234.index
+/DacAug19/src

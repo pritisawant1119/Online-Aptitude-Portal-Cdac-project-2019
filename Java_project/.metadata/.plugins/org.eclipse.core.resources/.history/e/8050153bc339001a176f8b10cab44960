@@ -1,0 +1,58 @@
+package com.app.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.app.pojos.User;
+
+@Service
+@Transactional
+public class UserDaoImpl implements IUserDao 
+{
+    @Autowired
+    private SessionFactory sf;
+    
+	@Override
+	public List<User> getAllUsers() {
+	
+		String jpql = "select u from User u where u.userType!='ADMIN'";
+		return sf.getCurrentSession().createQuery(jpql,User.class).getResultList();
+	}
+
+	@Override
+	public void addUser(User u)
+	{
+	    sf.getCurrentSession().save(u);
+	    
+	}
+
+	@Override
+	public void updateUser(User u) {
+		
+		
+	}
+
+	@Override
+	public void deleteUser(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User getUserByEmailAndPassword(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUser(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

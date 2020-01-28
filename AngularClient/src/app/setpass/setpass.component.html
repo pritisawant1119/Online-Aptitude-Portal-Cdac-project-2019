@@ -1,0 +1,24 @@
+
+
+<div style="position: fixed;top: 30%;left:50%;  transform: translate(-50%, -50%);" >
+  <form #myForm="ngForm" (ngSubmit)="updatePass(myForm.value)" role="form">
+    <legend style="text-align: center; color:aliceblue;"><b>Change Password</b></legend>
+
+<div class="form-group">
+  <label for="" style="color: aliceblue;"><b>OTP:</b></label>
+  <input ngModel style="width: 300px;" type="number" class="form-control" name="otp"  id="" placeholder="123465">
+</div>
+
+<div class="form-group">
+  <label for="password" style="color: aliceblue;"><b>New Password:</b></label>
+    <input required="required" ngModel style="width: 300px;"  type="text" class="form-control" name="password" id="" placeholder="xyz@gmail.com">
+  </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+<span *ngIf="!flag" style="color:aliceblue;">{{msg}}</span>
+<a *ngIf="flag" style="color:aliceblue;"  (click)="navigate()" >{{msg}} <br> Goto login page  </a>
+</div>
+
+
+

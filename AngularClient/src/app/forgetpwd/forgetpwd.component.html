@@ -1,0 +1,20 @@
+
+<div style="position: fixed;top: 30%;left:50%;  transform: translate(-50%, -50%);" >
+  <form   role="form">
+    <!-- <legend>Enter registered email</legend> -->
+    <h3 style="color: aliceblue;"><b>Enter Registered Email:</b></h3>
+  
+    <div  class="form-group">
+      <label for="email" style="color: antiquewhite;"><b>Email :</b></label>
+      <input [(ngModel)]="name" style="width: 300px;" type="text" class="form-control" name="email" id="email" placeholder="xyz@mail.com">
+    </div>
+  
+    <button type="button"  (click)="generateOtp()" class="btn btn-primary">Get OTP</button>
+  
+   <!-- <div style="color:red;">{{msg}}</div> -->
+  
+  
+  </form>
+  
+  </div>
+  
